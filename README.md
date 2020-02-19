@@ -30,7 +30,7 @@ group_name|string|null: false, unique: true|
 - has_many :messages
 
 ## groups_usersテーブル
-Column Type Options|
+Column|Type|Options|
 |------|----|-------|
 user_id|integer|null: false, foreign_key: true|
 group_id|integer|null: false, foreign_key: true|
