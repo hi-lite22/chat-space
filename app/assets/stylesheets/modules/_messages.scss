@@ -25,12 +25,12 @@
           color: #ffffff;
         }
         &__icons {
-          width: 60px;
-          color: #ffffff;
-          text-decoration: none;
-          text-align: right;
           letter-spacing: 5px;
           cursor: pointer;
+          display: flex;
+          .icons {
+            color: #ffffff;
+          }
         }
       }
     }

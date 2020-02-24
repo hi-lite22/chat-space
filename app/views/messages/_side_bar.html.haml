@@ -3,22 +3,18 @@
     .top-items
       .top-items__name
         = current_user.name
-      .top-items__icons
-        -#  = link_to do
-        -#   = icon('fas', 'pen-square', class: 'top-items__icons')
-        = link_to edit_user_path(current_user) do
-          = icon('fas', 'cog', class: 'top-items__icons')
+      %ul.top-items__icons
+        %li.list
+          = link_to new_group_path do
+            = icon('fas', 'pen-square', class: 'icons')
+        %li.list
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icons')
   .side-bar__group-list
-    .side-item
-      .side-item__group-name
-        techcamp
-      .side-item__text
-        まだメッセージがありません
-      .side-item__group-name
-        techcamp
-      .side-item__text
-        まだメッセージがありません
-      .side-item__group-name
-        techcamp
-      .side-item__text
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-item
+        = link_to '#' do
+          .side-item__group-name
+            = group.name
+          .side-item__text
+            まだメッセージがありません
