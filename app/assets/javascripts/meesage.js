@@ -1,7 +1,6 @@
 $(function(){ 
   var buildHTML = function(message) {
     image = (message.image) ? `<img class= "message-item__image" src=${message.image} >` : "";
-
     var html = `<div class="message-item" data-message-id="${message.id}"> 
           <div class="message-item__user">
             <div class="message-user">
@@ -23,7 +22,7 @@ $(function(){
 $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
- var url = $(this).attr('action')
+ var url = $(this).attr('action');
  $.ajax({
    url: url,
    type: "POST",
@@ -44,8 +43,7 @@ $('#new_message').on('submit', function(e){
 });
 })
   var reloadMessages = function() {
-    var last_message_id = $('.message:last').data("message-id");
-    
+    var last_message_id = $('.message-item:last').data("message-id");
     $.ajax({
       url: "api/messages",
       type: 'get',
