@@ -13,8 +13,8 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .side-item
-        = link_to group_messages_path(group) do
-          .side-item__group-name
+        = link_to group_messages_path(group), class: "side-item__list" do
+          .side-item__list__group-name
             = group.name
-          .side-item__text
+          .side-item__list__text
             = group.show_last_message

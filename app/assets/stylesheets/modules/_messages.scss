@@ -39,17 +39,22 @@
       background-color: #2f3e51;
       .side-item {
         height: 91px;
-        &__group-name {
-          padding: 20px 20px 5px 20px;
-          color: #ffffff;
-          font-weight: bold;
-          font-size: 15px;
-        }
-        &__text {
-          color: #ffffff;
-          font-weight: bold;
-          padding: 0px 20px 40px 20px;
-          font-size: 11px;
+        &__list {
+          text-decoration: none;
+          &__group-name {
+            padding: 20px 20px 5px 20px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 15px;
+            text-decoration: none;
+          }
+          &__text {
+            color: #ffffff;
+            font-weight: bold;
+            padding: 0px 20px 40px 20px;
+            font-size: 11px;
+            text-decoration: none;
+          }
         }
       }
     }
